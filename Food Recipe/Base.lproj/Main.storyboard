@@ -1,24 +1,302 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tzz-YY-djF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Recipes!-->
+        <scene sceneID="zV0-q0-Kna">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="Nv5-gn-aRp" customClass="FoodListTableViewController" customModule="Food_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="MBM-n2-XWP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Food" textLabel="cRD-i3-sTQ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="hPm-Xk-Rgg">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hPm-Xk-Rgg" id="HuV-Ri-Pu8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cRD-i3-sTQ">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Nv5-gn-aRp" id="752-Jz-AOV"/>
+                            <outlet property="delegate" destination="Nv5-gn-aRp" id="8hu-DC-ln0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Recipes!" id="OAG-CW-YPS">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5IC-gf-hqr">
+                            <connections>
+                                <segue destination="KQF-gX-YlL" kind="show" identifier="AddFoodSegue" id="ffl-Rw-4sD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="4Eb-oU-aFf" kind="show" identifier="RecipeSegue" id="NWX-dq-wFB"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUI-Gb-qww" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="948" y="150.67466266866569"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="xBz-vf-WAQ">
+            <objects>
+                <viewController id="4Eb-oU-aFf" customClass="RecipeViewController" customModule="Food_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ped-GN-C79">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OXi-YV-j5w">
+                                <rect key="frame" x="20" y="84" width="335" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="5fA-Tv-pvq"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xO8-6x-O5R">
+                                <rect key="frame" x="0.0" y="304" width="375" height="363"/>
+                                <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Recipe" textLabel="gUr-1N-kzP" rowHeight="60" style="IBUITableViewCellStyleDefault" id="0LE-Li-YK7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0LE-Li-YK7" id="LhN-Xt-v6R">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gUr-1N-kzP">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="59.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="OXi-YV-j5w" firstAttribute="leading" secondItem="C8Z-Hf-euX" secondAttribute="leading" constant="20" id="0LT-Pg-uPb"/>
+                            <constraint firstItem="xO8-6x-O5R" firstAttribute="trailing" secondItem="C8Z-Hf-euX" secondAttribute="trailing" id="ATP-fE-JsF"/>
+                            <constraint firstItem="xO8-6x-O5R" firstAttribute="leading" secondItem="C8Z-Hf-euX" secondAttribute="leading" id="B7u-6s-G0h"/>
+                            <constraint firstItem="OXi-YV-j5w" firstAttribute="top" secondItem="C8Z-Hf-euX" secondAttribute="top" constant="20" id="eAF-29-LZ8"/>
+                            <constraint firstItem="xO8-6x-O5R" firstAttribute="top" secondItem="OXi-YV-j5w" secondAttribute="bottom" constant="20" id="oIG-44-OE6"/>
+                            <constraint firstItem="xO8-6x-O5R" firstAttribute="bottom" secondItem="C8Z-Hf-euX" secondAttribute="bottom" id="tFM-aI-uhe"/>
+                            <constraint firstAttribute="trailing" secondItem="OXi-YV-j5w" secondAttribute="trailing" constant="20" id="yGz-2Q-4wy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="C8Z-Hf-euX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="B7Z-w4-A6J"/>
+                    <connections>
+                        <outlet property="imageView" destination="OXi-YV-j5w" id="uaZ-qU-iJz"/>
+                        <outlet property="navBar" destination="B7Z-w4-A6J" id="feJ-4K-kUm"/>
+                        <outlet property="tableView" destination="xO8-6x-O5R" id="VZ9-VJ-fay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zy7-Yb-zxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="510.49475262368821"/>
+        </scene>
+        <!--New Food Item-->
+        <scene sceneID="K1f-qQ-P4Y">
+            <objects>
+                <viewController id="KQF-gX-YlL" customClass="AddFoodViewController" customModule="Food_Recipe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b7v-1C-4Yz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c9Y-uQ-szN">
+                                <rect key="frame" x="20" y="84" width="72" height="35"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6tE-a7-Zwn">
+                                <rect key="frame" x="121" y="84" width="234" height="35"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiU-7D-kGC">
+                                <rect key="frame" x="20" y="419" width="335" height="40"/>
+                                <color key="backgroundColor" red="0.45503491419999997" green="0.72332982069999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Uwx-O8-CUz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                <state key="normal" title="Add Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addImage:" destination="KQF-gX-YlL" eventType="touchUpInside" id="MOg-Sx-Qiq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-yQ-IgS">
+                                <rect key="frame" x="20" y="479" width="335" height="168"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HQJ-fG-4v8">
+                                <rect key="frame" x="20" y="139" width="335" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="8Sd-Es-ZMV"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddRecipeCell" id="5jG-oo-w3b" customClass="AddRecipeCell" customModule="Food_Recipe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5jG-oo-w3b" id="APY-op-dbH">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipes:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMX-k5-BJd">
+                                                    <rect key="frame" x="0.0" y="4.5" width="92.5" height="35"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNa-ql-qxM">
+                                                    <rect key="frame" x="102.5" y="7" width="232.5" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eNa-ql-qxM" firstAttribute="centerY" secondItem="APY-op-dbH" secondAttribute="centerY" id="CRa-YW-cJa"/>
+                                                <constraint firstItem="WMX-k5-BJd" firstAttribute="centerY" secondItem="APY-op-dbH" secondAttribute="centerY" id="Rqw-MK-0rW"/>
+                                                <constraint firstAttribute="trailing" secondItem="eNa-ql-qxM" secondAttribute="trailing" id="URC-1R-klM"/>
+                                                <constraint firstItem="WMX-k5-BJd" firstAttribute="leading" secondItem="APY-op-dbH" secondAttribute="leading" id="tYp-j6-DxK"/>
+                                                <constraint firstItem="eNa-ql-qxM" firstAttribute="leading" secondItem="WMX-k5-BJd" secondAttribute="trailing" constant="10" id="wV1-Hq-mtX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="recipeLabel" destination="WMX-k5-BJd" id="t4p-Fn-rFA"/>
+                                            <outlet property="recipeTextField" destination="eNa-ql-qxM" id="yQh-Sd-xwj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adj-hw-faA">
+                                <rect key="frame" x="20" y="359" width="335" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="q3U-vh-eU1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="18"/>
+                                <state key="normal" title="Add a new Recipe">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addNewRecipe:" destination="KQF-gX-YlL" eventType="touchUpInside" id="QTG-Q7-xge"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.96447663839999997" blue="0.95010697820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6tE-a7-Zwn" firstAttribute="top" secondItem="WiB-Ib-jm2" secondAttribute="top" constant="20" id="0o8-6N-vsM"/>
+                            <constraint firstItem="WiB-Ib-jm2" firstAttribute="trailing" secondItem="6tE-a7-Zwn" secondAttribute="trailing" constant="20" id="2sH-1e-Xon"/>
+                            <constraint firstItem="WiB-Ib-jm2" firstAttribute="trailing" secondItem="EUA-yQ-IgS" secondAttribute="trailing" constant="20" id="69t-58-YKp"/>
+                            <constraint firstAttribute="bottom" secondItem="EUA-yQ-IgS" secondAttribute="bottom" constant="20" id="8RO-Rg-BMd"/>
+                            <constraint firstItem="iiU-7D-kGC" firstAttribute="height" secondItem="adj-hw-faA" secondAttribute="height" id="8eH-eF-M97"/>
+                            <constraint firstItem="WiB-Ib-jm2" firstAttribute="trailing" secondItem="HQJ-fG-4v8" secondAttribute="trailing" constant="20" id="Ago-o4-wGS"/>
+                            <constraint firstItem="6tE-a7-Zwn" firstAttribute="centerY" secondItem="c9Y-uQ-szN" secondAttribute="centerY" id="J3u-zD-mu9"/>
+                            <constraint firstItem="WiB-Ib-jm2" firstAttribute="trailing" secondItem="adj-hw-faA" secondAttribute="trailing" constant="20" id="K9b-Wj-U6r"/>
+                            <constraint firstItem="adj-hw-faA" firstAttribute="leading" secondItem="WiB-Ib-jm2" secondAttribute="leading" constant="20" id="Kjw-cc-f0F"/>
+                            <constraint firstItem="EUA-yQ-IgS" firstAttribute="leading" secondItem="WiB-Ib-jm2" secondAttribute="leading" constant="20" id="Kpa-uR-r1h"/>
+                            <constraint firstItem="c9Y-uQ-szN" firstAttribute="leading" secondItem="WiB-Ib-jm2" secondAttribute="leading" constant="20" id="N67-mO-BDf"/>
+                            <constraint firstItem="c9Y-uQ-szN" firstAttribute="top" secondItem="WiB-Ib-jm2" secondAttribute="top" constant="20" id="X5h-1N-gq4"/>
+                            <constraint firstItem="HQJ-fG-4v8" firstAttribute="leading" secondItem="WiB-Ib-jm2" secondAttribute="leading" constant="20" id="XAs-YG-NF4"/>
+                            <constraint firstItem="adj-hw-faA" firstAttribute="top" secondItem="HQJ-fG-4v8" secondAttribute="bottom" constant="20" id="bDZ-O9-dtZ"/>
+                            <constraint firstItem="iiU-7D-kGC" firstAttribute="leading" secondItem="WiB-Ib-jm2" secondAttribute="leading" constant="20" id="cPt-bm-qgD"/>
+                            <constraint firstItem="iiU-7D-kGC" firstAttribute="top" secondItem="adj-hw-faA" secondAttribute="bottom" constant="20" id="mYd-hk-Q3i"/>
+                            <constraint firstItem="HQJ-fG-4v8" firstAttribute="top" secondItem="c9Y-uQ-szN" secondAttribute="bottom" constant="20" id="p28-gY-9Bt"/>
+                            <constraint firstItem="6tE-a7-Zwn" firstAttribute="leading" secondItem="c9Y-uQ-szN" secondAttribute="trailing" constant="29" id="q3r-s6-acQ"/>
+                            <constraint firstItem="WiB-Ib-jm2" firstAttribute="trailing" secondItem="iiU-7D-kGC" secondAttribute="trailing" constant="20" id="w9o-YM-d9n"/>
+                            <constraint firstItem="EUA-yQ-IgS" firstAttribute="top" secondItem="iiU-7D-kGC" secondAttribute="bottom" constant="20" id="y5e-bT-PWR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WiB-Ib-jm2"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Food Item" id="uoW-Uc-v50">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xbe-3v-d9t">
+                            <connections>
+                                <action selector="saveNewFood:" destination="KQF-gX-YlL" id="2rx-0F-lKp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="EUA-yQ-IgS" id="cuh-8C-Wsh"/>
+                        <outlet property="nameLabel" destination="6tE-a7-Zwn" id="CPe-Q8-OSP"/>
+                        <outlet property="tableView" destination="HQJ-fG-4v8" id="WcJ-aD-jTV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8z-LF-KcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="-159.67016491754123"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kjk-7x-PqX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tzz-YY-djF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y4X-Wt-eDb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Nv5-gn-aRp" kind="relationship" relationship="rootViewController" id="Ecq-ZP-29v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jMy-uG-wch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154" y="151"/>
         </scene>
     </scenes>
 </document>

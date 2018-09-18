@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		B4492869214F3BE800603B32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4492868214F3BE800603B32 /* AppDelegate.swift */; };
-		B449286B214F3BE800603B32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449286A214F3BE800603B32 /* ViewController.swift */; };
 		B449286E214F3BE800603B32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B449286C214F3BE800603B32 /* Main.storyboard */; };
-		B4492871214F3BE800603B32 /* Food_Recipe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B449286F214F3BE800603B32 /* Food_Recipe.xcdatamodeld */; };
 		B4492873214F3BE900603B32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4492872214F3BE900603B32 /* Assets.xcassets */; };
 		B4492876214F3BE900603B32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4492874214F3BE900603B32 /* LaunchScreen.storyboard */; };
+		B449287E214F3C3C00603B32 /* FoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449287D214F3C3C00603B32 /* FoodListTableViewController.swift */; };
+		B4492880214F62D600603B32 /* AddFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B449287F214F62D600603B32 /* AddFoodViewController.swift */; };
+		B4492882214F62E400603B32 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4492881214F62E400603B32 /* RecipeViewController.swift */; };
+		B4492884215018EB00603B32 /* AddRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4492883215018EB00603B32 /* AddRecipeCell.swift */; };
+		B44928862150286900603B32 /* NewFoodDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44928852150286900603B32 /* NewFoodDelegate.swift */; };
+		B48EF9352150D22000E79466 /* FoodModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B48EF9332150D22000E79466 /* FoodModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4492865214F3BE800603B32 /* Food Recipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Recipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4492868214F3BE800603B32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B449286A214F3BE800603B32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B449286D214F3BE800603B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B4492870214F3BE800603B32 /* Food_Recipe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Food_Recipe.xcdatamodel; sourceTree = "<group>"; };
 		B4492872214F3BE900603B32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4492875214F3BE900603B32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4492877214F3BE900603B32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B449287D214F3C3C00603B32 /* FoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListTableViewController.swift; sourceTree = "<group>"; };
+		B449287F214F62D600603B32 /* AddFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodViewController.swift; sourceTree = "<group>"; };
+		B4492881214F62E400603B32 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		B4492883215018EB00603B32 /* AddRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeCell.swift; sourceTree = "<group>"; };
+		B44928852150286900603B32 /* NewFoodDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFoodDelegate.swift; sourceTree = "<group>"; };
+		B48EF9342150D22000E79466 /* FoodModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				B4492868214F3BE800603B32 /* AppDelegate.swift */,
-				B449286A214F3BE800603B32 /* ViewController.swift */,
 				B449286C214F3BE800603B32 /* Main.storyboard */,
+				B44928852150286900603B32 /* NewFoodDelegate.swift */,
+				B4492883215018EB00603B32 /* AddRecipeCell.swift */,
+				B449287F214F62D600603B32 /* AddFoodViewController.swift */,
+				B4492881214F62E400603B32 /* RecipeViewController.swift */,
+				B449287D214F3C3C00603B32 /* FoodListTableViewController.swift */,
 				B4492872214F3BE900603B32 /* Assets.xcassets */,
+				B48EF9332150D22000E79466 /* FoodModel.xcdatamodeld */,
 				B4492874214F3BE900603B32 /* LaunchScreen.storyboard */,
 				B4492877214F3BE900603B32 /* Info.plist */,
-				B449286F214F3BE800603B32 /* Food_Recipe.xcdatamodeld */,
 			);
 			path = "Food Recipe";
 			sourceTree = "<group>";
@@ -99,6 +111,7 @@
 				TargetAttributes = {
 					B4492864214F3BE800603B32 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -138,9 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B449286B214F3BE800603B32 /* ViewController.swift in Sources */,
+				B44928862150286900603B32 /* NewFoodDelegate.swift in Sources */,
+				B48EF9352150D22000E79466 /* FoodModel.xcdatamodeld in Sources */,
 				B4492869214F3BE800603B32 /* AppDelegate.swift in Sources */,
-				B4492871214F3BE800603B32 /* Food_Recipe.xcdatamodeld in Sources */,
+				B449287E214F3C3C00603B32 /* FoodListTableViewController.swift in Sources */,
+				B4492880214F62D600603B32 /* AddFoodViewController.swift in Sources */,
+				B4492882214F62E400603B32 /* RecipeViewController.swift in Sources */,
+				B4492884215018EB00603B32 /* AddRecipeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +310,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tiange-Wang.Food-Recipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -311,7 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Tiange-Wang.Food-Recipe";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -340,13 +357,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B449286F214F3BE800603B32 /* Food_Recipe.xcdatamodeld */ = {
+		B48EF9332150D22000E79466 /* FoodModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B4492870214F3BE800603B32 /* Food_Recipe.xcdatamodel */,
+				B48EF9342150D22000E79466 /* FoodModel.xcdatamodel */,
 			);
-			currentVersion = B4492870214F3BE800603B32 /* Food_Recipe.xcdatamodel */;
-			path = Food_Recipe.xcdatamodeld;
+			currentVersion = B48EF9342150D22000E79466 /* FoodModel.xcdatamodel */;
+			path = FoodModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
